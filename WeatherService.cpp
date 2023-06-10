@@ -2,14 +2,20 @@
 //
 
 #include <iostream>
+
 #include "JsonService.h"
+#include "XmlService.h"
 #include "Weather.h"
 
 int main()
 {
+
     JsonService js;
     Weather w = js.getWeather("weather.json");
     std::cout << w;
+    XmlService xs;
+    Weather s = xs.getWeather("weather.xml");
+    cout << s;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
